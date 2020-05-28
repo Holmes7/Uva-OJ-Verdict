@@ -1,0 +1,23 @@
+{
+	"name": "UVa Verdict",
+	"version": "1.0",
+	"description": "Verdict of the submitted solution appears on the problem page",
+	"manifest_version": 2,
+	"content_scripts": [
+		{
+			"matches": [
+				"https://onlinejudge.org/*"
+			],
+			"js": ["verdict.js"]
+		}
+	],
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"permissions": [
+		"tabs",
+		"https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=9"
+	]
+	
+}
